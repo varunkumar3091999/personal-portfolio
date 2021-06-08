@@ -22,11 +22,24 @@
     home.classList.remove("hidden")
     about.classList.add("hidden")
   }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("here")
+    var replacers = document.querySelectorAll('[data-replace]');
+    for (var i = 0; i < replacers.length; i++) {
+      let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+      Object.keys(replaceClasses).forEach(function (key) {
+        replacers[i].classList.remove(key);
+        replacers[i].classList.add(replaceClasses[key]);
+      });
+    }
+  });
 </script>
 
 
 
-    <div class="xl:h-screen xl:w-screen sm:h-screen lg:overflow-y-hidden md:overflow-y-scroll" id="home">
+    <div class="xl:h-screen xl:overflow-y-hidden xl:w-screen sm:h-screen lg:overflow-y-hidden md:overflow-y-scroll"
+      id="home">
 
       <div class="flex w-screen justify-between xl:pt-0 lg:pt-5 md:pt-10 md:px-5">
 
@@ -36,19 +49,24 @@
 
       </div>
 
-      <div class="xl:w-full xl:mt-24 pl-8 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10 ">
+      <div
+        class="w-screen flex flex-col items-center duration-1000 relative transform transition translate-y-20 ease-in-out opacity-0"
+        data-replace='{ "translate-y-20": "translate-y-0", "opacity-0": "opacity-100" }'>
+        <div class="xl:w-3/4 xl:mt-14 pl-8 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10 ">
 
-        <p class="xl:text-6xl xl:font-mono xl:leading-relaxed lg:text-8xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-8xl sm:w-full sm:pt-16 lg:pt-8 lg:w-full lg:mr-0">
-          Building stunning Web Applications and Websites.
-        </p>
+          <p
+            class="xl:text-6xl xl:font-mono xl:leading-relaxed lg:text-8xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-8xl sm:w-full sm:pt-16 lg:pt-8 lg:w-full lg:mr-0">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+          </p>
 
-        <p class="xl:text-5xl text-gray-500 xl:font-mono xl:w-5/6 xl:leading-loose lg:leading-relaxed lg:pt-14 lg:text-7xl sm:text-6xl
-        md:leading-relaxed md:w-full sm:w-full sm:text-8xl sm:pt-16">
-          A <strong>Web Developer</strong> in India.<br>
-          I specialise in <strong>UI development.</strong>.<br>
-          <button class="underline focus:outline-none" onclick="displayAbout()">Know more</button>.
-        </p>
+          <p class="xl:text-3xl text-gray-500 xl:font-mono xl:w-5/6       xl:leading-loose lg:leading-relaxed lg:pt-14 lg:text-7xl sm:text-6xl
+                                                  md:leading-relaxed md:w-full sm:w-full sm:text-8xl sm:pt-16">
+            A <strong>Web Developer</strong> in India.
+            I specialise in <strong>UI development.</strong>
+            <button class="underline focus:outline-none" onclick="displayAbout()">Know more</button>.
+            </p>
 
+        </div>
       </div>
 
     </div>
