@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  class="text-gray-200 overflow-x-hidden lg:mx-10 lg:pt-0 bg-black"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <title>About</title>
+  </head>
+  <body class="w-screen">
+    <script>
+      window.addEventListener("load", function () {
+        console.log("here");
+        var replacers = document.querySelectorAll("[data-replace]");
+        for (var i = 0; i < replacers.length; i++) {
+          let replaceClasses = JSON.parse(
+            replacers[i].dataset.replace.replace(/'/g, '"')
+          );
+          Object.keys(replaceClasses).forEach(function (key) {
+            replacers[i].classList.remove(key);
+            replacers[i].classList.add(replaceClasses[key]);
+          });
+        }
+      });
+    </script>
+    <div
+      class="
+        text-gray-400
+        flex
+        xl:text-5xl
+        lg:text-6xl
+        md:text-6xl
+        sm:text-9xl
+        xl:w-5/6
+        justify-between
+        mt-10
+        flex
+        w-screen
+        justify-between
+        xl:pt-0
+        lg:pt-5
+        xl:pt-0
+        md:pt-10 md:px-5
+        relative
+        transform
+        transition
+        duration-1000
+        -translate-x-10
+        ease-in-out
+        opacity-0
+      "
+      data-replace='{ "-translate-x-10": "translate-x-0",
+      "opacity-0": "opacity-100" }'
+    >
+      <p class="">Varun Kumar</p>
+      <a
+        href="../index.html"
+        class="focus:outline-none hover:scale-110 text-gray-400 font-thin"
+        >Home</a
+      >
+    </div>
+    <div
+      class="
+        text-gray-400
+        tracking-widest
+        font-extralight
+        duration-1000
+        relative
+        transform
+        transition
+        translate-x-20
+        ease-in-out
+        opacity-0
+      "
+      data-replace='{ "translate-x-20": "translate-x-0", "opacity-0": "opacity-100" }'
+    >
+      <div class="xl:w-4/5 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10 xl:mt-0">
+        <h1
+          class="
+            xl:text-7xl xl:leading-relaxed
+            text-gray-400
+            lg:text-8xl lg:leading-relaxed
+            md:leading-relaxed
+            sm:leading-10 sm:text-6xl sm:w-full sm:pt-16 sm:ml-5
+            lg:pt-8 lg:pt-0 lg:w-full lg:mr-0
+          "
+        >
+          Hi there! &#128512;<br />
+        </h1>
+        <p
+          class="
+            xl:text-5xl xl:leading-relaxed
+            lg:text-4xl lg:leading-relaxed
+            md:leading-relaxed
+            sm:leading-10 sm:text-5xl sm:w-full sm:pt-2 sm:ml-5
+            lg:pt-8
+            xl:pt-0
+            text-gray-400
+            lg:w-full lg:mr-0
+          "
+        >
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry.Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry.
+        </p>
+      </div>
+      <div class="xl:w-ful; xl:mt-24 xl:p-0 xl:md:mx-0 md:mt-10">
+        <h1
+          class="
+            w-3/4
+            xl:text-5xl xl:font-sans xl:leading-relaxed
+            lg:text-5xl lg:leading-relaxed
+            md:leading-relaxed
+            sm:leading-10 sm:text-6xl sm:w-full sm:pt-16 sm:ml-5
+            lg:pt-0 lg:w-full lg:mr-0
+            text-gray-400
+          "
+        >
+          My Career so far<br />
+        </h1>
+
+        <div class="md:flex lg:flex sm:flex-col xl:flex-row justify-between">
+          <p
+            class="
+              xl:text-4xl xl:leading-relaxed
+              lg:text-4xl lg:leading-relaxed
+              md:leading-relaxed
+              sm:leading-10 sm:text-5xl sm:w-screen sm:pt-2 sm:ml-5
+              lg:pt-8
+              xl:pt-0
+              lg:w-full lg:mr-0
+              text-gray-400
+            "
+          >
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.Lorem Ipsum is simply dummy text of the printing and
+            typesetting industryLorem Ipsum is simply dummy text of the printing
+            and typesetting industry
+          </p>
+          <span
+            class="
+              flex flex-wrap
+              content-start
+              sm:w-screen
+              text-3xl
+              m-5
+              sm:w-3/4
+              lg:
+            "
+          >
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Javascript
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              html
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              CSS
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              ReactJS
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Web development
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              UI Development
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              NodeJS
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Firebase
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Firestore
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Version Control(Git)
+            </p>
+            <p
+              class="
+                leading-none
+                p-2
+                pt-4
+                mx-2
+                mb-3
+                border border-gray-500
+                rounded-xl
+                h-16
+                transform
+                transition
+                duration-75
+                hover:bg-white hover:text-black
+              "
+            >
+              Tailwind Css
+            </p>
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

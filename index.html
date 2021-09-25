@@ -1,142 +1,106 @@
 <!DOCTYPE html>
-<html class="text-gray-200 overflow-x-hidden lg:mx-10 lg:pt-5 bg-black">
+<html class="text-gray-200 overflow-x-hidden lg:mx-10 lg:pt-0 bg-black">
   <head>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <title>Varun - Web Developer</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Varun - Web Developer</title>
   </head>
 
   <body>
-<script>
-  function displayAbout() {
-    const home = document.getElementById("home")
-    const about = document.getElementById("about")
-    home.classList.add("hidden")
-    about.classList.remove("hidden")
-  }
-
-  function displayHome() {
-    const home = document.getElementById("home")
-    const about = document.getElementById("about")
-    home.classList.remove("hidden")
-    about.classList.add("hidden")
-  }
-
-  window.addEventListener("load", function () {
-    console.log("here")
-    var replacers = document.querySelectorAll('[data-replace]');
-    for (var i = 0; i < replacers.length; i++) {
-      let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
-      Object.keys(replaceClasses).forEach(function (key) {
-        replacers[i].classList.remove(key);
-        replacers[i].classList.add(replaceClasses[key]);
+    <script>
+      window.addEventListener("load", function () {
+        console.log("here");
+        var replacers = document.querySelectorAll("[data-replace]");
+        for (var i = 0; i < replacers.length; i++) {
+          let replaceClasses = JSON.parse(
+            replacers[i].dataset.replace.replace(/'/g, '"')
+          );
+          Object.keys(replaceClasses).forEach(function (key) {
+            replacers[i].classList.remove(key);
+            replacers[i].classList.add(replaceClasses[key]);
+          });
+        }
       });
-    }
-  });
-</script>
-
-
-
-    <div class="xl:h-screen xl:overflow-y-hidden xl:w-screen sm:h-screen lg:overflow-y-hidden md:overflow-y-scroll"
-      id="home">
-
+    </script>
+    <div
+      class="
+        xl:h-screen xl:overflow-y-hidden xl:w-screen
+        sm:h-screen
+        lg:overflow-y-hidden
+        md:overflow-y-scroll
+        flex
+        items-center
+      "
+      id="home"
+    >
       <div
-        class="flex w-screen justify-between xl:pt-0 lg:pt-5 md:pt-10 md:px-5 relative transform transition -translate-y-10 ease-in-out opacity-0"
-        data-replace='{ "-translate-y-10": "translate-y-0", "opacity-0": "opacity-100" }'">
-
-        <p class="xl:text-4xl  font-mono lg:text-6xl md:text-6xl sm:text-9xl">
-          Varun Kumar
-        </p>
-
-      </div>
-
-      <div
-        class="w-screen flex flex-col items-center duration-1000 relative transform transition translate-y-20 ease-in-out opacity-0"
-        data-replace='{ "translate-y-20": "translate-y-0", "opacity-0": "opacity-100" }'>
-        <div class="xl:w-3/4 xl:mt-14 pl-8 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10 ">
-
+        class="
+          w-screen
+          flex flex-col
+          items-center
+          xl:items-center
+          md:px-3
+          duration-1000
+          relative
+          transform
+          transition
+          translate-y-20
+          ease-in-out
+          opacity-0
+        "
+        data-replace='{ "translate-y-20": "translate-y-0", "opacity-0": "opacity-100" }'
+      >
+        <div
+          class="
+            xl:w-10/12
+            pl-8
+            lg:pt-14
+            xl:p-0 xl:md:mx-0
+            md:mt-10
+            xl:mt-0 xl:pb-10
+          "
+        >
           <p
-            class="xl:text-6xl xl:font-mono xl:leading-relaxed lg:text-8xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-8xl sm:w-full sm:pt-16 lg:pt-8 lg:w-full lg:mr-0">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            class="
+              xl:text-9xl xl:leading-relaxed
+              lg:text-8xl lg:leading-relaxed
+              md:leading-relaxed
+              sm:leading-10 sm:text-8xl sm:w-full sm:pt-16
+              lg:pt-8
+              xl:pt-0
+              lg:w-full lg:mr-0
+              text-gray-500
+              font-semibold
+            "
+          >
+            Varun Kumar
           </p>
 
-          <p class="xl:text-3xl text-gray-500 xl:font-mono xl:w-5/6       xl:leading-loose lg:leading-relaxed lg:pt-14 lg:text-7xl sm:text-6xl
-                                                  md:leading-relaxed md:w-full sm:w-full sm:text-8xl sm:pt-16">
-            A <strong>Web Developer</strong> in India.
-            I specialise in <strong>UI development.</strong>
-            <button class="underline focus:outline-none" onclick="displayAbout()">Know more</button>.
-            </p>
-
-        </div>
-      </div>
-
-    </div>
-    <div class="xl:h-screen sm:h-screen hidden" id="about">
-      <div class="flex justify-between xl:pt-0 lg:pt-5 md:pt-10 md:px-5">
-        <p class="xl:text-4xl font-mono lg:text-6xl md:text-6xl sm:text-9xl">
-          Varun Kumar
-        </p>
-
-        <button class="xl:text-4xl text-gray-400 font-mono lg:text-5xl md:text-4xl sm:text-9xl underline focus:outline-none"
-          onclick="displayHome()">Back</button>
-      </div>
-      <div class="xl:w-4/5 xl:mt-24 ml-8 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10">
-        <h1
-          class="xl:text-7xl xl:font-mono xl:leading-relaxed lg:text-8xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-6xl sm:w-full sm:pt-16 sm:ml-5 lg:pt-8 lg:w-full lg:mr-0">
-          Hi there! &#128512;<br>
-        </h1>
-        <p
-          class="xl:text-3xl xl:font-mono xl:leading-relaxed lg:text-4xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-5xl sm:w-full sm:pt-2 sm:ml-5 lg:pt-8 lg:w-full lg:mr-0">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
-          printing and typesetting industry.</p>
-      </div>
-
-      <div class="xl:w-ful; xl:mt-24 ml-8 xl:p-0 xl:md:mx-0 md:mt-10">
-        <h1
-          class="w-3/4 xl:text-5xl xl:font-sans xl:leading-relaxed lg:text-5xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-6xl sm:w-full sm:pt-16 sm:ml-5 lg:pt-0 lg:w-full lg:mr-0">
-          My Career so far<br>
-        </h1>
-        <div class="md:flex lg:flex sm:flex-col xl:flex-row justify-between">
           <p
-            class="xl:text-2xl xl:font-mono xl:leading-relaxed lg:text-4xl lg:leading-relaxed md:leading-relaxed sm:leading-10 sm:text-5xl sm:w-screen sm:pt-2 sm:ml-5 lg:pt-8 lg:w-full lg:mr-0">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the
-            printing and typesetting industryLorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          <span class="flex flex-wrap font-mono content-start sm:w-screen text-3xl m-5 sm:w-3/4 lg:">
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Javascript</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              html</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              CSS</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              ReactJS</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Web development</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              UI Development</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              NodeJS</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Firebase</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Firestore</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Version Control(Git)</p>
-            <p
-              class="leading-none p-2 pt-4 mx-2 mb-3 border border-gray-500 rounded-xl h-16 transform transition duration-75 hover:bg-white hover:text-black">
-              Tailwind Css</p>
-          </span>
+            class="
+              xl:text-5xl
+              text-gray-500
+              xl:w-5/6
+              lg:leading-relaxed lg:pt-14 lg:text-7xl
+              xl:pt-0
+              sm:text-6xl
+              md:leading-relaxed
+              xl:leading-relaxed
+              md:w-full
+              sm:w-full sm:text-8xl sm:pt-16
+            "
+          >
+            A <strong>Web Developer</strong> based in India. I specialise in
+            <strong>User Interface</strong> development.
+            <a class="focus:outline-none font-thin" href="./screens/about.html"
+              >Know more</a
+            >.
+          </p>
         </div>
       </div>
     </div>

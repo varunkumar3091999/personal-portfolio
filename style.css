@@ -54,9 +54,14 @@ body {
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */
 
+html {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   font-family:
 		system-ui,
+    open-sans
 		-apple-system, /* Firefox supports this but not yet `system-ui` */
 		'Segoe UI',
 		Roboto,
