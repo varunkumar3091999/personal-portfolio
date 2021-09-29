@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="text-gray-200 overflow-x-hidden lg:mx-10 lg:pt-0 bg-black"
+  class="text-gray-200 overflow-x-hidden lg:mx-10 lg:pt-0 bg-black p-3 w-screen"
 >
   <head>
     <meta charset="UTF-8" />
@@ -11,7 +11,7 @@
 
     <title>About</title>
   </head>
-  <body class="w-screen">
+  <body class="w-">
     <script>
       window.addEventListener("load", function () {
         console.log("here");
@@ -31,13 +31,14 @@
       class="
         text-gray-400
         flex
+        text-xl
         xl:text-5xl
         lg:text-6xl
         md:text-6xl
         sm:text-9xl
         xl:w-5/6
         justify-between
-        mt-10
+        xl:mt-10
         flex
         w-screen
         justify-between
@@ -52,6 +53,7 @@
         -translate-x-10
         ease-in-out
         opacity-0
+        xsm:p-3
       "
       data-replace='{ "-translate-x-10": "translate-x-0",
       "opacity-0": "opacity-100" }'
