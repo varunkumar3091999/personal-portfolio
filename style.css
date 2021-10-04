@@ -55,7 +55,7 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 */
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !;
 }
 
 body {
