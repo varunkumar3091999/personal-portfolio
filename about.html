@@ -9,8 +9,8 @@
     lg:mx-10 lg:pt-0
     bg-black
     xl:p-3
-    overflow-x-hidden
     pl-2
+    2xl:w-screen
   "
   style="margin-left: 0"
 >
@@ -22,7 +22,7 @@
 
     <title>About</title>
   </head>
-  <body class="w-">
+  <body class="w-screen">
     <script>
       window.addEventListener("load", function () {
         console.log("here");
@@ -37,7 +37,11 @@
           });
         }
       });
+      var path = window.location.pathname;
+      var page = path.split("/").pop();
+      console.log(page);
     </script>
+
     <div
       class="
         text-gray-400
@@ -47,8 +51,9 @@
         lg:text-6xl
         md:text-6xl
         sm:text-4xl sm:w-11/12
+        lg:w-5/6
         w-11/12
-        xl:w-5/6
+        xl:w-11/12
         justify-between
         xl:mt-10
         flex
@@ -65,6 +70,9 @@
         ease-in-out
         opacity-0
         xsm:p-3
+        mx-auto
+        sm:mt-10
+        lg:px-5
       "
       data-replace='{ "-translate-x-10": "translate-x-0",
       "opacity-0": "opacity-100" }'
@@ -88,19 +96,37 @@
         translate-x-20
         ease-in-out
         opacity-0
+        sm:w-full
+        md:px-8
       "
       data-replace='{ "translate-x-20": "translate-x-0", "opacity-0": "opacity-100" }'
     >
-      <div class="xl:w-4/5 lg:pt-14 xl:p-0 xl:md:mx-0 md:mt-10 xl:mt-0">
+      <div
+        class="
+          xl:w-11/12
+          lg:3/4 lg:mx-5
+          xsm:w-1/2
+          sm:px-2
+          xl:p-0
+          md:mx-0
+          xl:mx-auto
+          md:mt-10
+          lg:mt-0
+          xl:mt-0
+          mx-auto
+        "
+      >
         <h1
           class="
             xl:text-7xl xl:leading-relaxed
             text-xl text-gray-400
-            lg:text-8xl lg:leading-relaxed
+            lg:text-6xl lg:leading-relaxed
             md:leading-relaxed
-            sm:leading-10 sm:text-4xl sm:w-full sm:pt-5 sm:ml-5
-            lg:pt-8 lg:pt-0 lg:w-full lg:mr-0
+            sm:leading-10 sm:text-4xl sm:pt-5 sm:ml-5
+            xl:ml-0
+            lg:pt-8 lg:pt-0 lg:w-
             mt-3
+            lg:w-5/6 lg:mx-auto
           "
         >
           Hi there! &#128512;<br />
@@ -109,15 +135,16 @@
           class="
             xl:text-5xl xl:leading-relaxed
             lg:text-4xl lg:leading-relaxed
-            sm:text-xl
+            sm:text-2xl
             text-sm
             md:leading-relaxed
             sm:leading-01 sm:pt-2 sm:ml-5
             lg:pt-8
-            sm:w-4/6
+            sm:w-full
             xl:pt-0
             text-gray-400
-            lg:w-full lg:mr-0
+            lg:w-5/6 lg:mx-auto
+            xl:w-full xl:mx-auto
           "
         >
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -125,18 +152,31 @@
           typesetting industry.
         </p>
       </div>
-      <div class="xl:w-ful; xl:mt-24 xl:p-0 xl:md:mx-0 md:mt-10">
+      <div
+        class="
+          xl:w-11/12
+          lg:3/4 lg:mx-5
+          sm:w-full sm:px-2
+          xl:p-0
+          md:mx-0
+          xl:mx-auto
+          md:mt-10
+          lg:mt-0
+          xl:mt-0
+          mx-auto
+        "
+      >
         <h1
           class="
-            w-3/4
-            text-xl
-            xl:text-5xl xl:leading-relaxed
-            lg:text-5xl lg:leading-relaxed
+            xl:text-7xl xl:leading-relaxed
+            text-xl text-gray-400
+            lg:text-6xl lg:leading-relaxed
             md:leading-relaxed
-            sm:leading-10 sm:text-4xl sm:w-full sm:pt-16 sm:ml-5
-            lg:pt-0 lg:w-full lg:mr-0
-            text-gray-400
+            sm:leading-10 sm:text-4xl sm:pt-5 sm:ml-5
+            xl:ml-0
+            lg:pt-8 lg:pt-0 lg:w-
             mt-3
+            lg:w-5/6 lg:mx-auto
           "
         >
           My Career so far<br />
@@ -145,15 +185,17 @@
         <div class="md:flex lg:flex sm:flex-col xl:flex-row justify-between">
           <p
             class="
-              sm:w-4/6
-              xl:text-4xl xl:leading-relaxed
+              xl:text-5xl xl:leading-relaxed
               lg:text-4xl lg:leading-relaxed
+              sm:text-2xl
+              text-sm
               md:leading-relaxed
-              sm:leading- sm:text-xl sm:pt-2 sm:ml-5
+              sm:leading-01 sm:pt-2 sm:ml-5
               lg:pt-8
+              sm:w-full
               xl:pt-0
-              lg:w-full lg:mr-0
               text-gray-400
+              lg:w-5/6 lg:mx-auto
             "
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -165,25 +207,32 @@
             class="
               flex flex-wrap
               content-start
-              sm:w-screen
-              text-3xl
-              xl:m-5
-              my-5
-              sm:w-3/4
-              lg:
+              xl:text-5xl xl:leading-relaxed
+              lg:text-4xl lg:leading-relaxed
+              sm:text-2xl
+              text-sm
+              md:leading-relaxed
+              sm:leading-01 sm:pt-2 sm:ml-5
+              lg:pt-8
+              sm:w-full
+              xl:pt-0
+              text-gray-400
+              lg:w-5/6 lg:mx-auto
             "
           >
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -195,14 +244,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -211,17 +262,20 @@
             >
               html
             </p>
+
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -233,14 +287,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -252,14 +308,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -271,14 +329,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -290,14 +350,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -309,14 +371,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -328,14 +392,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -347,14 +413,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
@@ -366,14 +434,16 @@
             <p
               class="
                 leading-none
-                p-2
-                xl:pt-4 xl:mx-2
+                p-3
+                xl:pt-2 xl:mx-2
                 mr-2
                 mb-3
                 border border-gray-500
                 rounded-xl
                 h-8
-                text-sm
+                xl:h-16
+                sm:h-14
+                text-md
                 transform
                 transition
                 duration-75
